@@ -17,3 +17,14 @@ python tsai_trial.py --preprocessing=multi_3 --arch=MLP --epochs=500 --subject_s
 
 Please note that you should select a low number of subject_size because training models for more subjects takes too long. If you are looking for reproducing the results for the entire set of subjects, you should set ``` --subject_size=100 ```. For setting the number of pulses per ECG record, you can adjust ``` --preprocessing=multi_2 ``` for 2 pulses per ECG record or ``` --preprocessing=naive ``` for 2 pulses per ECG record.
 
+## Training VisGNN
+
+You can run the following command to train the VisGNN model:
+
+```
+python VisGNN.py
+```
+
+To visualize the results, you can run ``` python visualize.py ```. If you'd like to see the results of a particular model, please change the directory in line 13. In default, it shows the results of FCN when 3 pulses are being used.
+
+Please note that ```output```  folder holds the previously recorded results for classification when 3 pulses were being used. We also provide results for training with 1 pulse and 2 pulses in folder  ```all_results```. If you want to see the results for these experiments, you can copy the .txt files to ```output``` folder and run visualize.py.
