@@ -23,6 +23,8 @@ You can run the following command to train the VisGIN model:
 python VisGIN.py
 ```
 
+NOTE: Please pay attention line 80 & 81 for the subject size. By default, it is 100 because the dataset consists of 100 subjects. However, it requires long training time (approx. 15 hours). If you are looking for rapid results, you can reduce the subject size by changing 100 to a lower number such as 3 as in baseline models.
+
 ## Visualizing results
 
 To visualize the results, you can run ``` python visualize.py ```. If you'd like to see the results of a particular model, please change the directory in line 13. In default, it shows the results of FCN when 3 pulses are being used.
