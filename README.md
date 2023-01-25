@@ -15,7 +15,7 @@ If you want to reproduce results for different models with different parameters,
 python tsai_trial.py --preprocessing=multi_3 --arch=MLP --epochs=500 --subject_size=3 --save_output=not_save
 ```
 
-Please note that you should select a low number of subject_size because training models for more subjects takes too long. If you are looking for reproducing the results for the entire set of subjects, you should set ``` --subject_size=100 ```. For setting the number of pulses per ECG record, you can adjust ``` --preprocessing=multi_2 ``` for 2 pulses per ECG record or ``` --preprocessing=naive ``` for 2 pulses per ECG record.
+Please note that you should select a low number of subject_size because training models for more subjects takes too long. If you are looking for reproducing the results for the entire set of subjects, you should set ``` --subject_size=100 ```. For setting the number of pulses per ECG record, you can adjust ``` --preprocessing=multi_2 ``` for 2 pulses per ECG record or ``` --preprocessing=naive ``` for a single pulse per ECG record.
 
 You can run the following command to train the VisGIN model:
 
