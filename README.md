@@ -1,7 +1,7 @@
-# Visibility-GNN
-This repository includes the Python implementation of a biometric authentication scheme, (VisGNN:  Visibility Graph Neural Network on One-dimensional Data for Biometric Authentication), using the proposed graph ML method.
+# Visibility-GIN
+This repository includes the Python implementation of a biometric authentication scheme, (VisGIN:  Visibility Graph Neural Network on One-dimensional Data for Biometric Authentication), using the proposed graph ML method.
 
-## Training baseline models and VisGNN
+## Training baseline models and VisGIN
 
 The following can be run to check baseline models:
 
@@ -20,7 +20,7 @@ Please note that you should select a low number of subject_size because training
 You can run the following command to train the VisGNN model:
 
 ```
-python VisGNN.py
+python VisGIN.py
 ```
 
 ## Visualizing results
