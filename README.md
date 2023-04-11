@@ -5,14 +5,13 @@ This repository includes the Python implementation of a biometric authentication
 
 The packages you'll need to utilize are given in requirements.txt. Basically, you can follow these steps:
 
-```
-git clone <repo>
-cd <repo>
-pip install virtualenv (if you don't already have virtualenv installed)
-virtualenv venv to create your new environment (called 'venv' here)
-source venv/bin/activate to enter the virtual environment
-pip install -r requirements.txt to install the requirements in the current environment
-```
+```git clone <repo>```
+```cd <repo>```
+```pip install virtualenv``` (if you don't already have virtualenv installed)
+```virtualenv venv``` to create your new environment (called 'venv' here)
+```source venv/bin/activate``` to enter the virtual environment
+```pip install -r requirements.txt``` to install the requirements in the current environment
+
 
 ## Training baseline models and VisGIN
 
