@@ -1,6 +1,19 @@
 # Visibility-GIN
 This repository includes the Python implementation of a biometric authentication scheme, (VisGIN:  Visibility Graph Neural Network on One-dimensional Data for Biometric Authentication), using the proposed graph ML method.
 
+## Setting up the environment
+
+The packages you'll need to utilize are given in requirements.txt. Basically, you can follow these steps:
+
+```
+git clone <repo>
+cd <repo>
+pip install virtualenv (if you don't already have virtualenv installed)
+virtualenv venv to create your new environment (called 'venv' here)
+source venv/bin/activate to enter the virtual environment
+pip install -r requirements.txt to install the requirements in the current environment
+```
+
 ## Training baseline models and VisGIN
 
 The following can be run to check baseline models:
