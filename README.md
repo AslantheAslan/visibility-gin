@@ -29,6 +29,4 @@ NOTE: Please pay attention line 80 & 81 for the subject size. By default, it is 
 
 To visualize the results, you can run ``` python visualize.py ```. If you'd like to see the results of a particular model, please change the directory in line 13. In default, it shows the results of FCN when 3 pulses are being used.
 
-![One-by-one classification results when number of extracted pulses is 3](https://github.com/AslantheAslan/visibility-gin/blob/main/visualizations/res_three_pulse.jpg)
-
 Please note that ```output```  folder holds the previously recorded results for classification when 3 pulses were being used. We also provide results for training with 1 pulse and 2 pulses in folder  ```all_results```. If you want to see the results for these experiments, you can copy the .txt files to ```output``` folder and run visualize.py.
