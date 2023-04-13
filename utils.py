@@ -118,18 +118,23 @@ def calc_baseline(signal):
 
     return baseline[: len(signal)]
 
-
-
 def time_series_to_graphs(pulse_list):
     graphs = []
     for subject in range(len(pulse_list)):
         for pulse in range(len(pulse_list[0])):
-            g = HorizontalVG()
+            g = NaturalVG()
             g.build(pulse_list[subject][pulse])
             nx_g = g.as_networkx()
-
+            #high = np.max(pulse_list[subject][pulse])
             for i in range(nx_g.number_of_nodes()):
-                nx_g.add_node(i, x=[pulse_list[subject][pulse][i], pulse_list[subject][pulse][i] - 0.5])
+                if i < 29 :
+                    slope1 = pulse_list[subject][pulse][i+1] - pulse_list[subject][pulse][i]
+                if i < 28 :
+                    slope2 = (pulse_list[subject][pulse][i+2] - pulse_list[subject][pulse][i])/2
+                if i < 27 :
+                    slope3 = pulse_list[subject][pulse][i+3] - pulse_list[subject][pulse][i]/3
+
+                nx_g.add_node(i, x=[pulse_list[subject][pulse][i], slope1, slope2, slope3])
 
             H = nx.Graph()
             H.add_nodes_from(sorted(nx_g.nodes(data=True)))
@@ -233,12 +238,13 @@ class GIN(torch.nn.Module):
     def __init__(self, hidden_channels):
         super(GIN, self).__init__()
         self.conv1 = GINConv(
-            Sequential(Linear(2, hidden_channels),
+            Sequential(Linear(4, hidden_channels),
                        BatchNorm1d(hidden_channels), ReLU(),
                        Linear(hidden_channels, hidden_channels), ReLU()))
         self.conv2 = GINConv(
             Sequential(Linear(hidden_channels, hidden_channels), BatchNorm1d(hidden_channels), ReLU(),
                        Linear(hidden_channels, hidden_channels), ReLU()))
+
         self.conv3 = GINConv(
             Sequential(Linear(hidden_channels, hidden_channels), BatchNorm1d(hidden_channels), ReLU(),
                        Linear(hidden_channels, hidden_channels), ReLU()))
@@ -250,6 +256,7 @@ class GIN(torch.nn.Module):
         h1 = self.conv1(x, edge_index)
         h2 = self.conv2(h1, edge_index)
         h3 = self.conv3(h2, edge_index)
+
 
         # Graph-level readout
         h1 = global_add_pool(h1, batch)

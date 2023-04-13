@@ -10,7 +10,7 @@ import matplotlib.pyplot as plt
 import os
 
 directory = os.getcwd()
-full_directory = directory + "\output\FCN_accuracy.txt"
+full_directory = directory + "\output\GIN_accuracy.txt"
 
 with open(full_directory, "rb") as f:   #Pickling
   accuracy = pickle.load(f) # check if accuracies saved successfully
