@@ -37,8 +37,10 @@ python VisGIN.py
 
 NOTE: Please pay attention line 80 & 81 for the subject size. By default, it is 100 because the dataset consists of 100 subjects. However, it requires long training time (approx. 15 hours). If you are looking for rapid results, you can reduce the subject size by changing 100 to a lower number such as 3 as in baseline models.
 
+![One-by-one classification results when number of extracted pulses is 3](https://github.com/AslantheAslan/visibility-gin/blob/main/visualizations/res_three_pulse.jpg)
+
 ## Visualizing results
 
-To visualize the results, you can run ``` python visualize.py ```. If you'd like to see the results of a particular model, please change the directory in line 13. In default, it shows the results of FCN when 3 pulses are being used.
+To visualize the results, you can run ``` python visualize.py ```. If you'd like to see the results of a particular model, please change the directory in line 13. In default, it shows the results of VisGIN when 3 pulses are being used.
 
 Please note that ```output```  folder holds the previously recorded results for classification when 3 pulses were being used. We also provide results for training with 1 pulse and 2 pulses in folder  ```all_results```. If you want to see the results for these experiments, you can copy the .txt files to ```output``` folder and run visualize.py.
