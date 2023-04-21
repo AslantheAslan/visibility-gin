@@ -35,7 +35,7 @@ You can run the following command to train the VisGIN model:
 python VisGIN.py
 ```
 
-NOTE: Please pay attention line 80 & 81 for the subject size. By default, it is 100 because the dataset consists of 100 subjects. However, it requires long training time (approx. 15 hours). If you are looking for rapid results, you can reduce the subject size by changing 100 to a lower number such as 3 as in baseline models.
+NOTE: Please pay attention to line 80 & 81 for the subject size. By default, it is 100 because the dataset consists of 100 subjects. However, it requires long training time (approx. 15 hours). If you are looking for rapid results, you can reduce the subject size by changing 100 to a lower number such as 3 as in baseline models.
 
 ![One-by-one classification results when number of extracted pulses is 3](https://github.com/AslantheAslan/visibility-gin/blob/main/images/ecg2graph.jpg)
 
