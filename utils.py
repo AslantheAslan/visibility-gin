@@ -158,7 +158,7 @@ class GCN(torch.nn.Module):
     def __init__(self, hidden_channels):
         super(GCN, self).__init__()
         torch.manual_seed(12345)
-        self.conv1 = GCNConv(2, hidden_channels)
+        self.conv1 = GCNConv(4, hidden_channels)
         self.conv2 = GCNConv(hidden_channels, hidden_channels)
         self.conv3 = GCNConv(hidden_channels, hidden_channels)
         self.lin = Linear(hidden_channels, 2)
@@ -184,7 +184,7 @@ class GraphSAGE(torch.nn.Module):
     def __init__(self, hidden_channels):
         super(GraphSAGE, self).__init__()
         torch.manual_seed(12345)
-        self.conv1 = SAGEConv(2, hidden_channels)
+        self.conv1 = SAGEConv(4, hidden_channels)
         self.conv2 = SAGEConv(hidden_channels, hidden_channels)
         self.conv3 = SAGEConv(hidden_channels, hidden_channels)
         self.lin = Linear(hidden_channels, 2)
@@ -210,7 +210,7 @@ class GAT_net(torch.nn.Module):
     def __init__(self, hidden_channels):
         super(GAT_net, self).__init__()
         torch.manual_seed(12345)
-        self.conv1 = GATConv(2, hidden_channels)
+        self.conv1 = GATConv(4, hidden_channels)
         self.conv2 = GATConv(hidden_channels, hidden_channels)
         self.conv3 = GATConv(hidden_channels, hidden_channels)
         self.lin = Linear(hidden_channels, 2)
