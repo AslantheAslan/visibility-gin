@@ -44,3 +44,22 @@ NOTE: Please pay attention to line 80 & 81 for the subject size. By default, it 
 To visualize the results, you can run ``` python visualize.py ```. If you'd like to see the results of a particular model, please change the directory in line 13. In default, it shows the results of VisGIN when 3 pulses are being used.
 
 Please note that ```output```  folder holds the previously recorded results for classification when 3 pulses were being used. We also provide results for training with 1 pulse and 2 pulses in folder  ```all_results```. If you want to see the results for these experiments, you can copy the .txt files to ```output``` folder and run visualize.py.
+
+## Citation
+
+If you refer to VisGIN in your research, please cite our paper:
+
+```
+@article{ASLAN2024121323,
+title = {VisGIN: Visibility Graph Neural Network on one-dimensional data for biometric authentication},
+journal = {Expert Systems with Applications},
+volume = {237},
+pages = {121323},
+year = {2024},
+issn = {0957-4174},
+doi = {https://doi.org/10.1016/j.eswa.2023.121323},
+url = {https://www.sciencedirect.com/science/article/pii/S0957417423018250},
+author = {Hacı İsmail Aslan and Chang Choi},
+keywords = {Graph Isomorphism Networks (GIN), Visibility Graphs, Biometric authentication, Electrocardiogram (ECG), Time-series classification, Graph classification}
+}
+```
